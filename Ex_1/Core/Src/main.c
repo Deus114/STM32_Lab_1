@@ -91,23 +91,23 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int i = 0;
+  int i = 0, st = 1;
   while (1)
   {
-	  if(i == 1){
-		  HAL_GPIO_WritePin ( LED_RED_GPIO_Port , LED_RED_Pin , GPIO_PIN_SET ) ;
-		  HAL_GPIO_WritePin ( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin , GPIO_PIN_RESET ) ;
-		  i = 1-i;
-		  HAL_Delay (2000) ;
-		  continue;
+	  if(i == 0){
+		  if(st == 0){
+			  HAL_GPIO_WritePin ( LED_RED_GPIO_Port , LED_RED_Pin , GPIO_PIN_SET ) ;
+			  HAL_GPIO_WritePin ( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin , GPIO_PIN_RESET ) ;
+		  }
+		  if(st == 1){
+		  	  HAL_GPIO_WritePin ( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin , GPIO_PIN_SET ) ;
+		  	  HAL_GPIO_WritePin ( LED_RED_GPIO_Port , LED_RED_Pin , GPIO_PIN_RESET ) ;
+		  }
+		  st = 1 - st ;
 	  }
-	  HAL_GPIO_WritePin ( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin , GPIO_PIN_SET ) ;
-	  HAL_GPIO_WritePin ( LED_RED_GPIO_Port , LED_RED_Pin , GPIO_PIN_RESET ) ;
-	  i = 1-i;
-	  HAL_Delay (2000) ;
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
+	  i += 1;
+	  i = 2 -i ;
+	  HAL_Delay (1000) ;
   }
   /* USER CODE END 3 */
 }

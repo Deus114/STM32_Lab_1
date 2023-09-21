@@ -61,8 +61,8 @@ static void MX_GPIO_Init(void);
   * @brief  The application entry point.
   * @retval int
   */
-void display7SEG (int counter){
-	if(counter == 0){
+void display7SEG (int num){
+	if(num == 0){
 		HAL_GPIO_WritePin ( B0_GPIO_Port , B0_Pin , GPIO_PIN_RESET ) ;
 		HAL_GPIO_WritePin ( B1_GPIO_Port , B1_Pin , GPIO_PIN_RESET ) ;
 		HAL_GPIO_WritePin ( B2_GPIO_Port , B2_Pin , GPIO_PIN_RESET ) ;
@@ -71,7 +71,7 @@ void display7SEG (int counter){
 		HAL_GPIO_WritePin ( B5_GPIO_Port , B5_Pin , GPIO_PIN_RESET ) ;
 		HAL_GPIO_WritePin ( B6_GPIO_Port , B6_Pin , GPIO_PIN_SET ) ;
 	}
-	if(counter == 1){
+	if(num == 1){
 			HAL_GPIO_WritePin ( B0_GPIO_Port , B0_Pin , GPIO_PIN_SET ) ;
 			HAL_GPIO_WritePin ( B1_GPIO_Port , B1_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B2_GPIO_Port , B2_Pin , GPIO_PIN_RESET ) ;
@@ -80,7 +80,7 @@ void display7SEG (int counter){
 			HAL_GPIO_WritePin ( B5_GPIO_Port , B5_Pin , GPIO_PIN_SET ) ;
 			HAL_GPIO_WritePin ( B6_GPIO_Port , B6_Pin , GPIO_PIN_SET ) ;
 	}
-	if(counter == 2){
+	if(num == 2){
 			HAL_GPIO_WritePin ( B0_GPIO_Port , B0_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B1_GPIO_Port , B1_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B2_GPIO_Port , B2_Pin , GPIO_PIN_SET ) ;
@@ -89,7 +89,7 @@ void display7SEG (int counter){
 			HAL_GPIO_WritePin ( B5_GPIO_Port , B5_Pin , GPIO_PIN_SET ) ;
 			HAL_GPIO_WritePin ( B6_GPIO_Port , B6_Pin , GPIO_PIN_RESET ) ;
 	}
-	if(counter == 3){
+	if(num == 3){
 			HAL_GPIO_WritePin ( B0_GPIO_Port , B0_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B1_GPIO_Port , B1_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B2_GPIO_Port , B2_Pin , GPIO_PIN_RESET ) ;
@@ -98,7 +98,7 @@ void display7SEG (int counter){
 			HAL_GPIO_WritePin ( B5_GPIO_Port , B5_Pin , GPIO_PIN_SET ) ;
 			HAL_GPIO_WritePin ( B6_GPIO_Port , B6_Pin , GPIO_PIN_RESET ) ;
 	}
-	if(counter == 4){
+	if(num == 4){
 			HAL_GPIO_WritePin ( B0_GPIO_Port , B0_Pin , GPIO_PIN_SET ) ;
 			HAL_GPIO_WritePin ( B1_GPIO_Port , B1_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B2_GPIO_Port , B2_Pin , GPIO_PIN_RESET ) ;
@@ -107,7 +107,7 @@ void display7SEG (int counter){
 			HAL_GPIO_WritePin ( B5_GPIO_Port , B5_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B6_GPIO_Port , B6_Pin , GPIO_PIN_RESET ) ;
 	}
-	if(counter == 5){
+	if(num == 5){
 			HAL_GPIO_WritePin ( B0_GPIO_Port , B0_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B1_GPIO_Port , B1_Pin , GPIO_PIN_SET ) ;
 			HAL_GPIO_WritePin ( B2_GPIO_Port , B2_Pin , GPIO_PIN_RESET ) ;
@@ -116,7 +116,7 @@ void display7SEG (int counter){
 			HAL_GPIO_WritePin ( B5_GPIO_Port , B5_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B6_GPIO_Port , B6_Pin , GPIO_PIN_RESET ) ;
 	}
-	if(counter == 6){
+	if(num == 6){
 			HAL_GPIO_WritePin ( B0_GPIO_Port , B0_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B1_GPIO_Port , B1_Pin , GPIO_PIN_SET ) ;
 			HAL_GPIO_WritePin ( B2_GPIO_Port , B2_Pin , GPIO_PIN_RESET ) ;
@@ -125,7 +125,7 @@ void display7SEG (int counter){
 			HAL_GPIO_WritePin ( B5_GPIO_Port , B5_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B6_GPIO_Port , B6_Pin , GPIO_PIN_RESET ) ;
 	}
-	if(counter == 7){
+	if(num == 7){
 			HAL_GPIO_WritePin ( B0_GPIO_Port , B0_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B1_GPIO_Port , B1_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B2_GPIO_Port , B2_Pin , GPIO_PIN_RESET ) ;
@@ -134,7 +134,7 @@ void display7SEG (int counter){
 			HAL_GPIO_WritePin ( B5_GPIO_Port , B5_Pin , GPIO_PIN_SET ) ;
 			HAL_GPIO_WritePin ( B6_GPIO_Port , B6_Pin , GPIO_PIN_SET ) ;
 	}
-	if(counter == 8){
+	if(num == 8){
 			HAL_GPIO_WritePin ( B0_GPIO_Port , B0_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B1_GPIO_Port , B1_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B2_GPIO_Port , B2_Pin , GPIO_PIN_RESET ) ;
@@ -143,7 +143,7 @@ void display7SEG (int counter){
 			HAL_GPIO_WritePin ( B5_GPIO_Port , B5_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B6_GPIO_Port , B6_Pin , GPIO_PIN_RESET ) ;
 	}
-	if(counter == 9){
+	if(num == 9){
 			HAL_GPIO_WritePin ( B0_GPIO_Port , B0_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B1_GPIO_Port , B1_Pin , GPIO_PIN_RESET ) ;
 			HAL_GPIO_WritePin ( B2_GPIO_Port , B2_Pin , GPIO_PIN_RESET ) ;

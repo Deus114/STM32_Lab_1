@@ -82,12 +82,12 @@ Disassembly of section .text:
   * @brief  The application entry point.
   * @retval int
   */
-void display7SEG (int counter){
+void display7SEG (int num){
  800014c:	b580      	push	{r7, lr}
  800014e:	b082      	sub	sp, #8
  8000150:	af00      	add	r7, sp, #0
  8000152:	6078      	str	r0, [r7, #4]
-	if(counter == 0){
+	if(num == 0){
  8000154:	687b      	ldr	r3, [r7, #4]
  8000156:	2b00      	cmp	r3, #0
  8000158:	d122      	bne.n	80001a0 <display7SEG+0x54>
@@ -127,7 +127,7 @@ void display7SEG (int counter){
  800019a:	48ae      	ldr	r0, [pc, #696]	; (8000454 <display7SEG+0x308>)
  800019c:	f000 fd54 	bl	8000c48 <HAL_GPIO_WritePin>
 	}
-	if(counter == 1){
+	if(num == 1){
  80001a0:	687b      	ldr	r3, [r7, #4]
  80001a2:	2b01      	cmp	r3, #1
  80001a4:	d122      	bne.n	80001ec <display7SEG+0xa0>
@@ -167,7 +167,7 @@ void display7SEG (int counter){
  80001e6:	489b      	ldr	r0, [pc, #620]	; (8000454 <display7SEG+0x308>)
  80001e8:	f000 fd2e 	bl	8000c48 <HAL_GPIO_WritePin>
 	}
-	if(counter == 2){
+	if(num == 2){
  80001ec:	687b      	ldr	r3, [r7, #4]
  80001ee:	2b02      	cmp	r3, #2
  80001f0:	d122      	bne.n	8000238 <display7SEG+0xec>
@@ -207,7 +207,7 @@ void display7SEG (int counter){
  8000232:	4888      	ldr	r0, [pc, #544]	; (8000454 <display7SEG+0x308>)
  8000234:	f000 fd08 	bl	8000c48 <HAL_GPIO_WritePin>
 	}
-	if(counter == 3){
+	if(num == 3){
  8000238:	687b      	ldr	r3, [r7, #4]
  800023a:	2b03      	cmp	r3, #3
  800023c:	d122      	bne.n	8000284 <display7SEG+0x138>
@@ -247,7 +247,7 @@ void display7SEG (int counter){
  800027e:	4875      	ldr	r0, [pc, #468]	; (8000454 <display7SEG+0x308>)
  8000280:	f000 fce2 	bl	8000c48 <HAL_GPIO_WritePin>
 	}
-	if(counter == 4){
+	if(num == 4){
  8000284:	687b      	ldr	r3, [r7, #4]
  8000286:	2b04      	cmp	r3, #4
  8000288:	d122      	bne.n	80002d0 <display7SEG+0x184>
@@ -287,7 +287,7 @@ void display7SEG (int counter){
  80002ca:	4862      	ldr	r0, [pc, #392]	; (8000454 <display7SEG+0x308>)
  80002cc:	f000 fcbc 	bl	8000c48 <HAL_GPIO_WritePin>
 	}
-	if(counter == 5){
+	if(num == 5){
  80002d0:	687b      	ldr	r3, [r7, #4]
  80002d2:	2b05      	cmp	r3, #5
  80002d4:	d122      	bne.n	800031c <display7SEG+0x1d0>
@@ -327,7 +327,7 @@ void display7SEG (int counter){
  8000316:	484f      	ldr	r0, [pc, #316]	; (8000454 <display7SEG+0x308>)
  8000318:	f000 fc96 	bl	8000c48 <HAL_GPIO_WritePin>
 	}
-	if(counter == 6){
+	if(num == 6){
  800031c:	687b      	ldr	r3, [r7, #4]
  800031e:	2b06      	cmp	r3, #6
  8000320:	d122      	bne.n	8000368 <display7SEG+0x21c>
@@ -367,7 +367,7 @@ void display7SEG (int counter){
  8000362:	483c      	ldr	r0, [pc, #240]	; (8000454 <display7SEG+0x308>)
  8000364:	f000 fc70 	bl	8000c48 <HAL_GPIO_WritePin>
 	}
-	if(counter == 7){
+	if(num == 7){
  8000368:	687b      	ldr	r3, [r7, #4]
  800036a:	2b07      	cmp	r3, #7
  800036c:	d122      	bne.n	80003b4 <display7SEG+0x268>
@@ -407,7 +407,7 @@ void display7SEG (int counter){
  80003ae:	4829      	ldr	r0, [pc, #164]	; (8000454 <display7SEG+0x308>)
  80003b0:	f000 fc4a 	bl	8000c48 <HAL_GPIO_WritePin>
 	}
-	if(counter == 8){
+	if(num == 8){
  80003b4:	687b      	ldr	r3, [r7, #4]
  80003b6:	2b08      	cmp	r3, #8
  80003b8:	d122      	bne.n	8000400 <display7SEG+0x2b4>
@@ -447,7 +447,7 @@ void display7SEG (int counter){
  80003fa:	4816      	ldr	r0, [pc, #88]	; (8000454 <display7SEG+0x308>)
  80003fc:	f000 fc24 	bl	8000c48 <HAL_GPIO_WritePin>
 	}
-	if(counter == 9){
+	if(num == 9){
  8000400:	687b      	ldr	r3, [r7, #4]
  8000402:	2b09      	cmp	r3, #9
  8000404:	d122      	bne.n	800044c <display7SEG+0x300>
